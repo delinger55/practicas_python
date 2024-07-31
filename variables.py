@@ -6,18 +6,19 @@ print (b)
 
 #Variables flotantes
 c = 1.5
-d = 3.7
+d = 9.8
 suma = c + d
 print(suma)
 
 #Variable de tipo string
-nombre = "Roberto"
-apellido = "Hernandez"
+nombre = "Enzo"
+apellido = "Rojas"
 fullname = nombre + " " + apellido
 print(fullname)
 
 #Variable de tipo boolean
 lampara = True
-print(lampara)
+print("La lampara está encendida", lampara)
 lampara = False
-print(lampara)
+print("La lampara está apagada", lampara)
+
