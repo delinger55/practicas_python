@@ -18,7 +18,7 @@ print(fullname)
 
 #Variable de tipo boolean
 lampara = True
-print("La lampara está encendida", lampara)
+print("La lampara esta encendida", lampara)
 lampara = False
-print("La lampara está apagada", lampara)
+print("La lampara esta apagada", lampara)
 

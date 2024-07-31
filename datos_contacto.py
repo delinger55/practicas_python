@@ -22,3 +22,23 @@
 
 # Imprime el promedio de las edades y alturas.
 # Imprime el total de caracteres en los nombres.
+
+nombre1 = input("ingresa tu nombre: ")
+edad1 = int(input("ingresa tu edad: "))
+altura1 = float(input("ingresa tu altura: "))
+
+nombre2 = input("ingresa tu nombre: ")
+edad2 = int(input("ingresa tu edad: "))
+altura2 = float(input("ingresa tu altura: "))
+
+nombre3 = input("ingresa tu nombre: ")
+edad3 = int(input("ingresa tu edad: "))
+altura3 = float(input("ingresa tu altura: "))
+
+promedio_edad = (edad1 + edad2 + edad3)/3
+promedio_altura =(altura1 + altura2 + altura3)/3
+total_caracteres = (len(nombre1) + len(nombre2) + len(nombre3))
+
+print("Promedio de edades: {:.2f}".format(promedio_edad))
+print("promedio de alturas: {:.2f} ".format( promedio_altura))
+print("Total de caracteresde en los nombres es: ", total_caracteres)
