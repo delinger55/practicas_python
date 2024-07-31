@@ -35,10 +35,12 @@ nombre3 = input("ingresa tu nombre: ")
 edad3 = int(input("ingresa tu edad: "))
 altura3 = float(input("ingresa tu altura: "))
 
+#Sacar promedios
 promedio_edad = (edad1 + edad2 + edad3)/3
 promedio_altura =(altura1 + altura2 + altura3)/3
 total_caracteres = (len(nombre1) + len(nombre2) + len(nombre3))
 
+#imprimir
 print("Promedio de edades: {:.2f}".format(promedio_edad))
 print("promedio de alturas: {:.2f} ".format( promedio_altura))
 print("Total de caracteresde en los nombres es: ", total_caracteres)
