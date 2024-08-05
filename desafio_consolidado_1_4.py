@@ -43,21 +43,75 @@
 print(f"\nHay un empate entre {' y '.join(lideres)} con {puntuacion_maxima} puntos cada uno.")
 """
 
-jugadores = {}
-
+ # Diccionario de jugadores con sus puntuaciones iniciales
 jugadores = {
-    "Raúl", 0,
-    "María", 0,
-    "Pablo", 0
+    "Alice": 0,
+    "Bob": 0,
+    "Charlie": 0
 }
 
-#Lista de niveles
-niveles = ["Fácil", "Medio", "Dificil", "Experto"]
-print(niveles)
-niveles_puntos = [10, 20, 30 ,40]
+# Lista de niveles con sus respectivos puntos
+niveles = ["Fácil", "Medio", "Difícil", "Experto"]
+puntos_por_nivel = [10, 20, 30, 50]
 
-jugador= input("Ingrese el nombre del jugador: ")
-if jugador == "Raúl" or "María" or "Pablo":
-    print("pasa al siguiente paso")
+# Recibir información del usuario
+jugador_actual = input("Ingrese el nombre del jugador: ")
+nivel_completado = input("Ingrese el nivel completado (Fácil/Medio/Difícil/Experto): ")
+tiempo_completado = input("Ingrese el tiempo de completado en segundos: ")
+
+# Validación de entradas
+es_valido = False
+if jugador_actual == "Alice" or jugador_actual == "Bob" or jugador_actual == "Charlie":
+    if nivel_completado == "Fácil" or nivel_completado == "Medio" or nivel_completado == "Difícil" or nivel_completado == "Experto":
+        if tiempo_completado.isdigit():
+            es_valido = True
+
+if es_valido:
+    tiempo_completado = int(tiempo_completado)
+    indice_nivel = 0
+    if nivel_completado == "Fácil":
+        indice_nivel = 0
+    elif nivel_completado == "Medio":
+        indice_nivel = 1
+    elif nivel_completado == "Difícil":
+        indice_nivel = 2
+    elif nivel_completado == "Experto":
+        indice_nivel = 3
+
+    puntos_ganados = puntos_por_nivel[indice_nivel]
+
+    # Sistema de bonificación
+    if tiempo_completado <= 30 and (nivel_completado == "Difícil" or nivel_completado == "Experto"):
+        puntos_ganados += 5
+
+    # Actualización de puntuación
+    jugadores[jugador_actual] += puntos_ganados
+
+    # Verificación del líder
+    puntuacion_maxima = max(jugadores["Alice"], jugadores["Bob"], jugadores["Charlie"])
+    lideres = []
+    if jugadores["Alice"] == puntuacion_maxima:
+        lideres.append("Alice")
+    if jugadores["Bob"] == puntuacion_maxima:
+        lideres.append("Bob")
+    if jugadores["Charlie"] == puntuacion_maxima:
+        lideres.append("Charlie")
+
+    # Resultado
+    if len(lideres) == 1:
+        print(f"\nEl líder actual es {lideres[0]} con {puntuacion_maxima} puntos.")
+    else:
+        print(f"\nHay un empate entre {' y '.join(lideres)} con {puntuacion_maxima} puntos cada uno.")
+
+    print("\nPuntuaciones actuales:")
+    print(f"Alice: {jugadores['Alice']} puntos")
+    print(f"Bob: {jugadores['Bob']} puntos")
+    print(f"Charlie: {jugadores['Charlie']} puntos")
 else:
-    print("Ingrese un nombre correcto")    
+    print("\nEntrada no válida. Por favor, verifique los datos ingresados.")
+    if not (jugador_actual == "Alice" or jugador_actual == "Bob" or jugador_actual == "Charlie"):
+        print("El jugador ingresado no existe.")
+    if not (nivel_completado == "Fácil" or nivel_completado == "Medio" or nivel_completado == "Difícil" or nivel_completado == "Experto"):
+        print("El nivel ingresado no es válido.")
+    if not tiempo_completado.isdigit():
+        print("El tiempo debe ser un número entero positivo.")
