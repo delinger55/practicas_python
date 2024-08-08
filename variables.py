@@ -3,6 +3,8 @@ a = 10
 b = 20
 print (a)
 print (b)
+suma = a + b
+print("La suma de a + b es: ", suma)
 
 #Variables flotantes
 c = 1.5

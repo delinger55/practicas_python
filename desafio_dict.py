@@ -8,7 +8,7 @@
 
 # Obtener Datos de Consola:
 
-# Usa input() para obtener el nombre,  el correo electrónico y el número de teléfono del contacto.
+# Usa input() para obtener el nombre, el correo electrónico y el número de teléfono del contacto.
 # Almacenar Datos:
 
 # Almacena la información en un diccionario.

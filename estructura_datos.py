@@ -1,5 +1,4 @@
 #Lista(list)
-
 frutas = ["Tunas", "Guanabana", "Maracuya"]
 numeroPrimos = [3, 5, 7, 11]
 print(type(frutas))
