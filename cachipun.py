@@ -33,3 +33,68 @@
 
 # # En resumen, el reto combina varios aspectos fundamentales de la programación en Python en un proyecto cohesivo y entretenido,
 # lo que lo hace ideal para practicar y reforzar habilidades de programación.
+
+import random
+
+def juego_piedra_papel_tijera():
+    # Opciones disponibles
+    opciones = ['piedra', 'papel', 'tijera']
+    # Puntajes iniciales
+    puntaje_jugador = 0
+    puntaje_computadora = 0
+
+    # Inicia el bucle del juego
+    while True:
+        # Muestra el menú de opciones al jugador
+        print("\nElige tu opción:")
+        print("1. Piedra")
+        print("2. Papel")
+        print("3. Tijera")
+        print("4. Salir")
+
+        try:
+            eleccion = int(input("Ingresa el número de tu elección: "))
+            if eleccion == 4:
+                break  # Salir del juego
+            if eleccion not in [1, 2, 3]:
+                print("Por favor, ingresa una opción válida.")
+                continue
+        except ValueError:
+            print("Entrada no válida, por favor ingresa un número.")
+            continue
+
+        # Elección del jugador
+        eleccion_jugador = opciones[eleccion - 1]
+        # Elección aleatoria de la computadora
+        eleccion_computadora = random.choice(opciones)
+
+        # Mostrar las elecciones
+        print(f"\nTú elegiste: {eleccion_jugador}")
+        print(f"La computadora eligió: {eleccion_computadora}")
+
+        # Comparar las elecciones y determinar el ganador
+        if eleccion_jugador == eleccion_computadora:
+            print("¡Es un empate!")
+        elif (eleccion_jugador == 'piedra' and eleccion_computadora == 'tijera') or \
+             (eleccion_jugador == 'papel' and eleccion_computadora == 'piedra') or \
+             (eleccion_jugador == 'tijera' and eleccion_computadora == 'papel'):
+            print("¡Ganaste esta ronda!")
+            puntaje_jugador += 1
+        else:
+            print("La computadora gana esta ronda.")
+            puntaje_computadora += 1
+
+        # Mostrar puntajes actuales
+        print(f"Puntaje - Tú: {puntaje_jugador}, Computadora: {puntaje_computadora}")
+
+    # Mostrar el resultado final
+    print("\nJuego terminado.")
+    if puntaje_jugador > puntaje_computadora:
+        print("¡Felicidades, ganaste el juego!")
+    elif puntaje_jugador < puntaje_computadora:
+        print("La computadora ganó el juego. ¡Mejor suerte la próxima vez!")
+    else:
+        print("El juego terminó en empate.")
+
+# Ejecutar el juego
+juego_piedra_papel_tijera()

@@ -11,10 +11,17 @@ def multiplicar(a, b):
 def dividir(a, b):
     return a / b
 
-"""
-def imprimir_resultado(a, b, resultado):
-    print(f"El resultado")
-"""
+def imprimir_resultado(a,b,resultado):
+    print(f"El Resulado de la suma de: {a} y {b} es: {resultado}")
+    
+def imprimir_resultado2(a,b,resultado):
+    print(f"El Resulado de la Resta de: {a} y {b} es: {resultado}")
+    
+    
+def solicitar_numeros(num1,num2):
+    num1=float(input("ingresa el primer numero: "))
+    num2=float(input("ingresa el segundo numero: "))
+    return num1,num2
 
     
 
@@ -33,22 +40,22 @@ def calculadora():
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
             resultado = sumar(num1, num2)
-            print(f"El resultado de la suma de {num1} y {num2} es: {resultado}")
+            imprimir_resultado(num1,num2,resultado)
         elif opcion ==2:
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
             resultado = restar(num1, num2)
-            print(f"El resultado de la resta de {num1} y {num2} es: {resultado}")   
+            imprimir_resultado2(num1,num2,resultado)   
         elif opcion ==3:
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
             resultado = multiplicar(num1, num2)
-            print(f"El resultado de la multiplicación de {num1} y {num2} es: {resultado}")   
+            imprimir_resultado(num1,num2,resultado) 
         elif opcion ==4:
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
             resultado = dividir(num1, num2)
-            print(f"El resultado de la division de {num1} y {num2} es: {resultado}") 
+            imprimir_resultado(num1,num2,resultado) 
         elif opcion ==5:
             print("Hasta la proxima")
             break 
