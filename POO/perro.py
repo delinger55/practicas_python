@@ -13,7 +13,7 @@ class Dog:
     def comer(self):
         print(f"El perro {self.name}, de raza {self.raza}, de {self.age} años come tres veces al día")    
     
-#Principa o main
+#Principal o main
 perro = Dog("Jefazo", "labrador", 3)
 perro.ladrar()
 perro.salir_a_pasear()
