@@ -1,7 +1,6 @@
 
 # Descripción: Devuelve el valor para la clave especificada. Si la clave no existe, devuelve el valor por defecto proporcionado.
 
-
 diccionario = {'nombre': 'Juan', 'edad': 30}
 print(diccionario.get('nombre'))  # Output: Juan
 print(diccionario.get('altura', 'No especificado'))  # Output: No especificado

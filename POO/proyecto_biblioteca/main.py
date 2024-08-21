@@ -3,7 +3,7 @@ from periodico import Periodico
 from revista import Revista
 
 def main():
-    libro1 = Libro("Los miserables", "Victor Hugo", 1934, 654)
+    libro1 = Libro("Los miserables", "Victor Hugo", 2078, 654)
     print(f"Nombre libro: {libro1.titulo}")
     print(f"Autor: {libro1.autor}")
     print(f"Año publicacion: {libro1.annio_publicacion}")

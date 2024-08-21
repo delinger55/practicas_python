@@ -74,7 +74,7 @@ class MaterialBiblioteca:
     
     @annio_publicacion.setter
     def annio_publicacion(self, year):
-        if year < 2025:
+        if year > 2025:
             print("El año no puede ser mayor a 2024")
         else:
             self._annio_publicacion = year
