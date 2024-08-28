@@ -5,7 +5,7 @@ class Carrito:
     def __init__(self):
         self.productos = {}
         
-    def agregar_productos(self, producto,cantidad):
+    def agregar_productos(self, producto, cantidad):
         if producto.nombre in self.productos: 
             self.productos[producto.nombre]["cantidad"] += cantidad 
         else:

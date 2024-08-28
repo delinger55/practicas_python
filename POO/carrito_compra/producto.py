@@ -3,7 +3,7 @@ class StockInsuficienteError(Exception):
     pass
 
 class Producto:
-    def __init__(self,nombre,precio, cantidad_stock):
+    def __init__(self, nombre, precio, cantidad_stock):
         self.__nombre = nombre #Atributo privado
         self.__precio = precio #Atributo privado
         self.__cantidad_stock = cantidad_stock #Atributo privado
@@ -28,9 +28,9 @@ class Producto:
     def cantidad_stock(self,cantidad):  
         if cantidad < 0:
             raise ValueError("La cantidad no puede ser negativa")
-        self.__cantidad_stock =cantidad
+        self.__cantidad_stock = cantidad
         
-    def reducir_stock(self,cantidad):
+    def reducir_stock(self, cantidad):
         if cantidad > self.__cantidad_stock:
             raise StockInsuficienteError("Stock insuficiente para la cantidad solicitada")
         self.__cantidad_stock -= cantidad    
