@@ -42,4 +42,4 @@ def remplazar_palabra(archivo_origen, palabra_buscar, palabra_remplazo, archivo_
 #Main
 copiar_archivo("practicas_python/files/ejemplo.txt", "practicas_python/files/ejemplo2.txt")
 contar_palabra("practicas_python/files/ejemplo.txt")
-remplazar_palabra("practicas_python/files/ejemplo.txt", "Tlaxcala", "Temuco", "practicas_python/files/ejemplo2.txt")
+remplazar_palabra("practicas_python/files/ejemplo.txt", "Tlaxcala", "Angol", "practicas_python/files/ejemplo2.txt")

@@ -14,7 +14,7 @@ def verificar_edad(edad):
         
 #Main
 try:
-    edad = 56
+    edad = 13
     verificar_edad(edad)
     
 except EdadFueradeRangoError as e:

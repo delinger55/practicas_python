@@ -6,7 +6,7 @@ def verificarEdad(edad):
     return "Registro exitoso"
 
 try:
-    mensaje = verificarEdad(13)
+    mensaje = verificarEdad(15)
     print(mensaje)
 except ValueError as e:
     print(f"Error: {e}")
