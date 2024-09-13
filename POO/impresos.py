@@ -1,6 +1,6 @@
 #Clase libro
 class Book:
-    #pass #para declarar q una clase no haga nada
+    #pass para declarar q una clase no haga nada
     def __init__(self, title, author):
         self.title = title
         self.author = author

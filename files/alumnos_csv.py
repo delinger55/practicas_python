@@ -3,7 +3,7 @@ import csv
 def escribir_csv(filename, datos):
     with open(filename, mode="w", newline="") as file:
         escritor_csv = csv.writer(file)#Invocar la función escribir de la librería csv
-        escritor_csv.writerow(["Nombre", "Apellido", "Ciudad"])#Cabecera
+        escritor_csv.writerow(["Nombre", "Apellido", "Notas"])#Cabecera
         for fila in datos:#Recorremos los datos recibidos
             escritor_csv.writerow(fila)
         print("Archivo csv creado con exito")
@@ -24,7 +24,7 @@ def agregar_csv(filename, registro):
             
         
 datos_iniciales = [["Moises", "Barrera", "Santiago"], ["Edgar", "Carrion", "Osorno"], ["Crhistofer", "Sanchez", "Santiago"]]
-nombre_archivo = "practicas_python/files/csv/students.csv"
+nombre_archivo = "practicas_python/files/csv/students2.csv"
 registro_agregar = ["Armin", "Cano", "Villarrica"]
 registro_agregar2 = ["Jose", "Vinuela", "Santiago"]
 escribir_csv(nombre_archivo, datos_iniciales)
